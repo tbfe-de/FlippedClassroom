@@ -7,7 +7,7 @@ usability, nota on than on making it "nice". Only in the
 last steps things will be cleaned up to reduce the use of
 the C/C++ preprocessor to the necessary minimum.
 
-## Practical exercises
+## Practical Exercises
  
 In each of the steps you will find a *TODO*.
 * It details the modifications you are meant to make to

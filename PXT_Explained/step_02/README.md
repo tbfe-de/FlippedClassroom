@@ -1,5 +1,3 @@
-## The Model solution
-
 Another preprocessor feature used in the model solution is
 to put several code variants into a single file. While in
 general this is not always considered good practice, in
