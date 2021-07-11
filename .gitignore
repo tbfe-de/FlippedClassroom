@@ -30,15 +30,16 @@
 *.exe
 *.out
 *.app
+
+# VS Code Stuff
 .vscode/launch.json
 .vscode/settings.json
 .vscode/tasks.json
-PXT_Explained/.DS_Store
-PXT_Explained/step_00/.DS_Store
-PXT_Explained/step_00/main
-PXT_Explained/step_00/main.dSYM/Contents/Info.plist
-PXT_Explained/step_00/main.dSYM/Contents/Resources/DWARF/main
-PXT_Explained/step_01/main
-PXT_Explained/step_01/main.dSYM/Contents/Info.plist
-PXT_Explained/step_01/main.dSYM/Contents/Resources/DWARF/main
 .DS_Store
+*/.DS_Store
+*/*/.DS_Store
+*/*/main
+*/*/main.dSYM
+
+# Remains from downloads
+*.zip

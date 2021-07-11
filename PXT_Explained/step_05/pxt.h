@@ -3,7 +3,9 @@
 
 #include <iostream>
 #include <sstream>
+#if __has_include(<boost/type_index.hpp>)
 #include <boost/type_index.hpp>
+#endif
 
 #define PX(...)\
     ((void)(std::cout << "::: " << __FILE__\
