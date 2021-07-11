@@ -43,3 +43,4 @@
 
 # Remains from downloads
 *.zip
+.fixmake.c
