@@ -9,7 +9,7 @@ class NamedValue {
 public:
     NamedValue(char const* name, int value)
         : value_{value} {
-        auto const sz = (sizeof name) - 1;
+        auto const sz = (sizeof name_) - 1;
         std:strncpy(name_, name, sz);
         name_[sz] = '\0';
     }

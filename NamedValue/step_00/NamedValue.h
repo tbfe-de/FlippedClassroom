@@ -8,4 +8,4 @@ class NamedValue {
     int value_;
 };
 
-#endif
+#endif // NamedValue_H

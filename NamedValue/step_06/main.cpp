@@ -18,16 +18,16 @@ int main() {
     NamedValue u{"width", 20};
     NamedValue v{"area", 100};
     t = v.value() / u.value();
-//  t = v / u;
+//  t = v / u;   // <--- should REPLACE the line above
     t = 5;
     PX(t);
     PX_("height: 5", t);
     PX_("width: 20", u);
     PX_("area: 100", v);
     u = u.value() + 10;
-//  u = u + 10;
+//  u = u + 10; // <---- should REPLACE the line above
     v = t.value() * u.value();
-//  v = t * u;
+//  v = t * u;  // <---- should REPLACE the line above
     PX_("height: 5", t);
     PX_("width: 30", u);
     PX_("area: 150", v);
