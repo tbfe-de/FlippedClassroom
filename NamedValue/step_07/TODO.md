@@ -11,7 +11,7 @@ The reason is that combined assignments need to be
 implemented separately sa member functions:
 
 -   operator+=(int) to support something like u += 10;
--   operator_=_(int) to support something like u = 3;
+-   operator=(int) to support something like u = 3;
 -   etc.
 
 It looks like a bit of work to do this for all the combined
