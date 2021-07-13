@@ -3,7 +3,7 @@ all: main
 
 OBJS=clock4.o LimitCounter.o OverflowCounter.o
 
-main: main.cpp $(OBJS) main.cpp Makefile
+main: main.cpp $(OBJS) main.cpp Clock.h OverflowCounter.h LimitCounter.h Makefile
 	g++ -std=c++14 main.cpp $(OBJS) -o $@
 
 clock4.o: Clock.cpp Clock.h OverflowCounter.h LimitCounter.h
