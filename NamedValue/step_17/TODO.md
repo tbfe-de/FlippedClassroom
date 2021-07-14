@@ -16,14 +16,14 @@ implemented outside the class. Then the class scope which
 before would have been something like this
 
 ```
-NamedValue& NamedValue::operator=(NamdValue const& rhs) {
+NamedValue& NamedValue::operator=(NamedValue const& rhs) {
     // implementation of copy c'tor
 }
 ```
 would turn in
 ```
 template<typename T>
-NamedValue<T>& NamedValue<T>::operator=(NameValueT> const& rhs) {
+NamedValue<T>& NamedValue<T>::operator=(NameValue<T> const& rhs) {
     // implementation of outside of class still NEEDS to be in
     // a header file but WILL be compiled into subroutine to
     // be called with JSR/RTS at the machine level. (Unless
