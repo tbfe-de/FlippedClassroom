@@ -1,5 +1,10 @@
+==========================================================
+COPY OVER the file `vf_array.h` from the previous solution
+==========================================================
+
+
 Below is the first functionality added to `vf_array`.
--   The ability to add soemthing to is end ...
+-   The ability to add something to is end ...
 -   ... and to test for it.
 
 ```
@@ -14,7 +19,7 @@ public:
 ```
 
 Also the tests are left as "TBD" in `main.cpp` but feel free
-to refer back to `step_00/main.cpp` to see what is approrpiate..
+to refer back to `step_00/main.cpp` to see what is aprorpriate.
 
 **NOTE:**\
 The tests in `step_00/main.cpp` are only provided for reference.

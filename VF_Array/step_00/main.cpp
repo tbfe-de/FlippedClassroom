@@ -22,4 +22,14 @@ int main() {
     std::vector<double> v2{};
     v2.push_back(1.25);	PX_("1.25", v2.back());
   } // --------------------------------------------------
+
+  { // ------------------------------------ step_03 tests
+    std::vector<int> v{};
+                      PX_("0",      v.size());
+                      PX_("true",   v.empty());
+    v.push_back(31);	PX_("1",      v.size());
+                      PX_("false",  v.empty());
+    v.push_back(32);	PX_("2",      v.size());
+                      PX_("true",   v.empty())
+  } // --------------------------------------------------
 }
