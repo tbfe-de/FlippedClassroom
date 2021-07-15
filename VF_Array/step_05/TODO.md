@@ -8,7 +8,7 @@ syntax based on the `using` keyword introduced in C++11.
 
 (If you just *Copy&Paste* the below lines into the class
 `vf_array` this will work too, as the classic syntax to
-defne types – or rather type aliases – still works.)
+define types – or rather type aliases – still works.)
 
 Implement two more member functions in class `vf_array`:
 
