@@ -3,6 +3,7 @@
 PN_(Developing VF_Array – std::vector reference tests);
 
 #include <vector>
+#include <ostringstream>
 
 int main() {
     std::cout.setf(std::ios::boolalpha);
@@ -70,5 +71,16 @@ int main() {
 //  PT_("",		decltype(v.end()));
 //  PT_("",		decltype(v.cbegin()));
 //  PT_("",		decltype(v.cend()));
-  }
+  } // --------------------------------------------------
+
+  { // ------------------------------------ step_06 tests
+    std::vector<int> v{1, 2, 3};
+    std::ostringstream os;
+    for (auto e : v) {
+        os << e << ' ';
+    }
+    PX_("1 2 3 ", os.str());
+    // -------^ there is a trailing space that needs
+    //          to be included in the expectation
+  } // ---------------------------------------------------
 }
