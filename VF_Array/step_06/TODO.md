@@ -29,13 +29,13 @@ step, for the moment it suffices to test as follows:
 
 ```
   { // ------------------------------------ step_06 tests
-    vf_array<int, 1> v0{{}};        PX("0", v0.size());
-    vf_array<int, 1> v1{{1, 2, 3}}; PX("1", v1.size());
-    vf_array<int, 2> v2{{2, 3, 4}}; PX("2", v2.size());
-    vf_array<int, 3> v3{{4, 5, 6}}; PX("3", v3.size());
-    vf_array<int, 4> v4{{5, 6, 7}}; PX("3", v4.size());
-    vf_array<int, 5> v5{{6, 7, 8}}; PX("3", v5.size());
-    vf_array<int, 6> v6{{7, 8, 9}}; PX("3", v6.size());
+    vf_array<int, 1> v0{{}};        PX_("0", v0.size());
+    vf_array<int, 1> v1{{1, 2, 3}}; PX_("1", v1.size());
+    vf_array<int, 2> v2{{2, 3, 4}}; PX_("2", v2.size());
+    vf_array<int, 3> v3{{4, 5, 6}}; PX_("3", v3.size());
+    vf_array<int, 4> v4{{5, 6, 7}}; PX_("3", v4.size());
+    vf_array<int, 5> v5{{6, 7, 8}}; PX_("3", v5.size());
+    vf_array<int, 6> v6{{7, 8, 9}}; PX_("3", v6.size());
    } // --------------------------------------------------
 ```
 
