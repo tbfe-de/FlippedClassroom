@@ -21,11 +21,19 @@ Implement two more member functions in class `vf_array`:
     …
 ```
 
-It probably needs no mention to test for these directly
-with the `PT_` macro. But you can also test with `decltype`
-and member function calls returning these types.
+Of course, also USE this types now in the places where
+fomerly somthing based on `T` was used.
+
+Note that it is somewhat hard to test for these types as
+if you use the `decltype(expression)`-based tests like in
+`step_00/main.cpp` you get the final types and these may
+be specific for a given C++ library implementation.
+
+Though, if instead you use direct tests based on `PT_`
+you can at least test if such type aliases are present.
+
 
 **REMEMBER:**\
 It you test expressions with `decltype` anything "refering
-to memory" (and the meaning: you might take its address)
+to memory" (in the meaning: you might take its address)
 has a reference `&` as part of its deduced type.

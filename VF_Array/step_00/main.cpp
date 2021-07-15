@@ -61,4 +61,14 @@ int main() {
     auto p2 = v2.cbegin();
     PT_("int const&", decltype(*p2));
   } // --------------------------------------------------
+
+  { // ------------------------------------ step_05 tests
+    std::vector<int> v{};
+
+    PT_("int&",		decltype(v.back()));
+//  PT_("",		decltype(v.begin()));
+//  PT_("",		decltype(v.end()));
+//  PT_("",		decltype(v.cbegin()));
+//  PT_("",		decltype(v.cend()));
+  }
 }
