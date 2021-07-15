@@ -1,8 +1,8 @@
 #include "pxt.h"
 
-PN_(Developing VF_Array – std::vector reference tests);
+PN_(Developing VF_Array – Testing STEP 2)
 
-#include <vector>
+#include "vf_array.h"
 
 int main() {
     std::cout.setf(std::ios::boolalpha);

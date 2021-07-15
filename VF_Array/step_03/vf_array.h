@@ -11,7 +11,7 @@ private:
 public:
     auto max_size() const { return N; }
     void push_back(T const& e) { *filled++ = e; }
-    T& back() { return *filled; }
+    T& back() { return filled[-1]; }
 };
 
 #endif // VF_ARRAY_H

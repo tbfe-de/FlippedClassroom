@@ -13,8 +13,8 @@ public:
 };
 ```
 
-Adding the necessary left as "TBD" in `main.cpp`. (Feel
-to refer back to `step_00/main.cpp` to see what may be
+Adding the necessary tests is left as "TBD" in `main.cpp`.
+(Feel to refer back to `step_00/main.cpp` to see what may be
 appropriate tests.)
 
 **NOTE:**\

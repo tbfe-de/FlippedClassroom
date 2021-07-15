@@ -6,8 +6,13 @@ representable by `std::size_t`.
 For an `vf_array` it should return the size specified as
 second template argument.
 
-The program compiles fine, so nothing to do and continue to
-the next step?
+The program compiles fine and you get this:
+```
+... Developing vf_array – Testing STEP 1
+=== main.cpp: 2 tests passed (OK)
+```
+
+So there is nothing to do and you can continue to the next step?
 
 NO !!!
 

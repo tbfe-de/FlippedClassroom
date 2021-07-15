@@ -25,13 +25,13 @@ brace of the block implementing the function?
 
 If you forgot to make these two member functions `const`
 consider the following sequence of steps:
--   first ADD a test that is supposed to fail as long
+-   first ADD A TEST that is supposed to fail as long
     `size()` and `empty()` aren't marked `const`,
--   then DEMONSTRATE the problem with this test while
+-   then DEMONSTRATE THE PROBLEM with this test while
     the functions still are not yet marked const,
     what in turn causes a compile error.
--   and finally FIX the problem (by marking the two member
-    functions `size()`and `empty()` as `const`.
+-   and finally APPLY THE FIX to the problem (by marking
+    the two member functions `size()`and `empty()` as `const`.
 
 **That way you have PROVEN the suspected problem actually
 EXISTED and the modification actually FIXED it.**
