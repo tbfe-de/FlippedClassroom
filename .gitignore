@@ -43,4 +43,7 @@
 
 # Remains from downloads
 *.zip
+*.swp
+
+# Other stuff
 .fixmake.c

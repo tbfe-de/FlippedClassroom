@@ -25,6 +25,24 @@ int main() {
   } // --------------------------------------------------
 
   { // ------------------------------------ step_03 tests
+    vf_array<int, 10> v{};  PX_("0",      v.size());
+                            PX_("true",   v.empty());
+
+    v.push_back(31);	      PX_("1",      v.size());
+                            PX_("false",  v.empty());
+
+    v.push_back(32);	      PX_("2",      v.size());
+                            PX_("false",  v.empty())
+
+    auto const& v2{v};      PX_("false",  v2.empty());
+                            PX_("2",      v2.size());
+
+    vf_array const<bool, 2> v3{};
+                            PX_("0",      v3.size());
+                            PX_("true",   v3.empty());
+  } // --------------------------------------------------
+
+  { // ------------------------------------ step_04 tests
 
     /*TBD*/
 

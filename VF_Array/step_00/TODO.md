@@ -1,10 +1,15 @@
 # Reference Tests
 
-As the class `VF_Array` will have the same programming interface as
-an `std::vector` basically the same set of tests should work for
-both.
+The class `vf_array` will have the same programming
+interface as an `std::vector`, so basically the same set of
+tests should work for either one.
 
-So as a starting point in the `main` program here an extensive set
-of tests is provided which an `std::vector` all passes. Simply
-copy these tests over from here to the class being developed.
+As a starting point, the `main` program of `step_00``
+provides has an extensive set of tests an `std::vector` all
+will pass. Simply copy over these tests from here to the
+class being developeda and change the test object
+-   from `std::vector<sometype>`
+-   to `vf_array<sometype, somesize>`
 
+It's not mandatory to re-use the tests from here to test
+`vf_array`. If you want to roll your own tests go ahead.
