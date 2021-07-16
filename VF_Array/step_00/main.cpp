@@ -2,8 +2,22 @@
 
 PN_(Developing VF_Array – std::vector reference tests);
 
+#include <iostream>
 #include <vector>
-#include <ostringstream>
+
+template<typename T>
+std::ostream& operator<<(std::ostream& lhs, std::vector<T> const &rhs) {
+    for (auto const& e : rhs) {
+        lhs << e << ' ';
+    }
+    return lhs;
+}
+
+template<typename T>
+auto is_const(T&) { return "T ref"; }
+
+template<typename T>
+auto is_const(T const&) { return "const T ref"; }
 
 int main() {
     std::cout.setf(std::ios::boolalpha);
@@ -74,13 +88,51 @@ int main() {
   } // --------------------------------------------------
 
   { // ------------------------------------ step_06 tests
-    std::vector<int> v{1, 2, 3};
-    std::ostringstream os;
-    for (auto e : v) {
-        os << e << ' ';
-    }
-    PX_("1 2 3 ", os.str());
-    // -------^ there is a trailing space that needs
-    //          to be included in the expectation
-  } // ---------------------------------------------------
+    std::vector<int> v0{};          PX_("0", v0.size());
+//  std::vector<int> v1{1, 2, 3};   PX_("1", v1.size());
+//  std::vector<int> v2{2, 3, 4};   PX_("2", v2.size());
+    std::vector<int> v3{4, 5, 6};   PX_("3", v3.size());
+    std::vector<int> v4{5, 6, 7};   PX_("3", v4.size());
+    std::vector<int> v5{6, 7, 8};   PX_("3", v5.size());
+    std::vector<int> v6{7, 8, 9};   PX_("3", v6.size());
+  } // --------------------------------------------------
+
+  { // ------------------------------------ step_07 tests
+    std::vector<int> v0{};          PX_("",         v0);
+//  std::vector<int> v1{1, 2, 3};   PX_("1 ",       v1);
+//  std::vector<int> v2{2, 3, 4};   PX_("2 3 ",     v2);
+    std::vector<int> v3{4, 5, 6};   PX_("4 5 6 ",   v3);
+    std::vector<int> v4{5, 6, 7};   PX_("5 6 7 ",   v4);
+    std::vector<int> v5{6, 7, 8};   PX_("6 7 8 ",   v5);
+    std::vector<int> v6{7, 8, 9};   PX_("7 8 9 ",   v6);
+   } // --------------------------------------------------
+
+  { // ------------------------------------ step_08 tests
+    std::vector<int> v{};
+    PX_("T ref",  	is_const(    v.back()	    ));
+    PX_("T ref", 	is_const(    *v.begin()	    ));
+    PX_("const T ref", 	is_const(    *v.cbegin()    ));
+    PX_("T ref", 	is_const(    *v.end()	    ));
+    PX_("const T ref", 	is_const(    *v.cend()      ));
+
+    std::vector<int> const cv{};
+    PX_("const T ref",  is_const(    cv.back()	    ));
+    PX_("const T ref", 	is_const(    *cv.begin()    ));
+    PX_("const T ref", 	is_const(    *cv.cbegin()   ));
+    PX_("const T ref", 	is_const(    *cv.end()	    ));
+    PX_("const T ref", 	is_const(    *cv.cend()	    ));
+  } // --------------------------------------------------
+
+  { // ------------------------------------ step_09 tests
+    std::vector<int> v{4, 5, 6};
+    PX_("T ref", is_const(v[0]));	PX_("4", v[0]);
+					PX_("5", v[1]);
+					PX_("6", v[2]);
+    PX_("T ref", is_const(v.at(0)));	PX_("4", v.at(0));
+                                        PX_("5", v.at(1));
+                                        PX_("6", v.at(2));
+    std::vector<int> const cv{0};
+    PX_("const T ref", is_const(cv[0]));
+    PX_("const T ref", is_const(cv.at(0)));
+  } // --------------------------------------------------
 }

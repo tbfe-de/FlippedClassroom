@@ -1,6 +1,6 @@
 #include "pxt.h"
 
-PN_(Developing VF_Array – Testing STEP 5)
+PN_(Developing VF_Array – Testing STEP 8)
 
 #include "vf_array.h"
 
@@ -81,7 +81,6 @@ int main() {
     PT_("int*",		vf_array<int, 10>::iterator);
     PT_("int const*",	vf_array<int, 10>::const_iterator);
 
-
     // decltype(expression)-based tests
     PT_("int&",			decltype(v.back()));
     PT_("int*",			decltype(v.begin()));
@@ -93,12 +92,32 @@ int main() {
     PT_("unsigned long",	decltype(v.max_size()));
     PT_("unsigned long",	decltype(v.size()));
     PT_("bool",			decltype(v.empty()));
-
   } // --------------------------------------------------
   
-  { // ------------------------------------ step_06 test
+  { // ------------------------------------ step_06 tests
+    vf_array<int, 1> v0{};        PX_("0", v0.size());
+    vf_array<int, 1> v1{1, 2, 3}; PX_("1", v1.size());
+    vf_array<int, 2> v2{2, 3, 4}; PX_("2", v2.size());
+    vf_array<int, 3> v3{4, 5, 6}; PX_("3", v3.size());
+    vf_array<int, 4> v4{5, 6, 7}; PX_("3", v4.size());
+    vf_array<int, 5> v5{6, 7, 8}; PX_("3", v5.size());
+    vf_array<int, 6> v6{7, 8, 9}; PX_("3", v6.size());
+  } // --------------------------------------------------
+
+  { // ------------------------------------ step_07 tests
+    vf_array<int, 1> v0{};          PX_("",         v0);
+    vf_array<int, 1> v1{1, 2, 3};   PX_("1 ",       v1);
+    vf_array<int, 2> v2{2, 3, 4};   PX_("2 3 ",     v2);
+    vf_array<int, 3> v3{4, 5, 6};   PX_("4 5 6 ",   v3);
+    vf_array<int, 4> v4{5, 6, 7};   PX_("5 6 7 ",   v4);
+    vf_array<int, 5> v5{6, 7, 8};   PX_("6 7 8 ",   v5);
+    vf_array<int, 6> v6{7, 8, 9};   PX_("7 8 9 ",   v6);
+  } // --------------------------------------------------
+
+  { // ------------------------------------ step_08 tests
 
     /*TBD*/
 
   } // --------------------------------------------------
+
 }
