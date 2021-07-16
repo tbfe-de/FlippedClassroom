@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <sstream>
+#if __has_include(<boost/type_index.hpp>)
+#include <boost/type_index.hpp>)
+#endif
 #include <boost/type_index.hpp>
 
 #define PX(...)\
