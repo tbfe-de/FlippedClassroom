@@ -18,3 +18,20 @@ working chose among the following:
      class hierarchie.
 -    Always return the same dummy element put as another member
      in the class `vf_array` for that purpose.
+
+class vf_array {
+
+
+public:
+	.... operator[](std::size_t idx) {  ..... }
+	.... at(std::size_t idx) {  ..... }
+
+
+}
+
+vf_array obj;  
+
+....
+
+obj[8] = ....x
+obj.at(8) = .....
